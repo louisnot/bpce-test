@@ -86,8 +86,8 @@ public class MeetingServiceImpl implements MeetingService {
 
     @Override
     public List<Meeting> getAllMeetings(String roomName, String startTime, String endTime) {
-        LocalTime start = startTime != null ? LocalTime.parse(startTime) : LocalTime.MIN;
-        LocalTime end = endTime != null ? LocalTime.parse(endTime) : LocalTime.MAX;
+        LocalTime start = startTime != null ? LocalTime.parse(startTime) : LocalTime.of(8,0);
+        LocalTime end = endTime != null ? LocalTime.parse(endTime) : LocalTime.of(20,0);
 
         if (roomName != null) {
             return meetingRepository.findByRoom_NameAndStartTimeBetween(roomName, start, end);

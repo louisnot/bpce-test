@@ -35,10 +35,10 @@ public class MeetingController {
      * @return la liste des meetings
      */
     @GetMapping
-    public List<Meeting> getMeetings(@RequestParam(required = false) String startTime,
-                                     @RequestParam(required = false) String endTime,
-                                     @RequestParam(required = false) String roomName) {
-        return meetingService.getAllMeetings(startTime, endTime, roomName);
+    public List<Meeting> getMeetings(@RequestParam(required = false) String roomName,
+                                     @RequestParam(required = false) String startTime,
+                                     @RequestParam(required = false) String endTime) {
+        return meetingService.getAllMeetings(roomName, startTime, endTime);
     }
 
     /**
