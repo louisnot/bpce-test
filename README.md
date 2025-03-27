@@ -1,9 +1,9 @@
 ## BPCE-TEST MEETING PLANNER : Gestionnaire des salles de réunion d'une PME
 
 Ce projet est une API développé en Java 17. Les librairies utilisées sont:
-	- spring-boot (avec web et data-jpa)
-	- lombok
-	- h2database
+- spring-boot (avec web et data-jpa)
+- lombok
+- h2database
 
 Le but est de pouvoir faire une réservation de salle pour un meeting au sein d'une entreprise.
 Les données sont sur une base H2 en mémoire accéssible via une interface web (login: sa et sans mdp)
