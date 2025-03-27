@@ -11,7 +11,9 @@ import org.bpce.test.bpcetest.service.MeetingService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 @Service
 public class MeetingServiceImpl implements MeetingService {
@@ -30,7 +32,7 @@ public class MeetingServiceImpl implements MeetingService {
 
 
     /**
-     * assigne une room pour un meeting si possible ou throw une erreur
+     * assigne une room pour un meeting si possible ou alors on creer un errormeetingDto
      * @param meetingDtoList list des meetings nécessitant une room
      * returns PlanificationResponseDto contenant les meetings possibles et ceux impossibles
      */
